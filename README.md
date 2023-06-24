@@ -60,6 +60,8 @@ The EDA process provides valuable insights into the dataset, enabling us to make
 In the preprocessing step, outliers are handled to ensure they do not negatively impact the model's performance. Outliers are data points that deviate significantly from the majority of the data and can introduce noise or bias in the model's predictions.
 
 Analyze the numerical features to identify potential outliers using statistical methods or visualization techniques. In the previous image you can see some of them.
+ ![EDA Heatmap](images/joinplot.png)
+ Here you can see some outliers corresponding for input errors for the 'x' variable
 
 ## Enlabel
 
