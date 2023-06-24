@@ -38,7 +38,7 @@ To perform the EDA, we use the `pandas`, `matplotlib`, and `seaborn` libraries i
   - The correlation matrix is calculated using the `corr()` function from `pandas`.
   - A heatmap is created using `seaborn` to visualize the correlations between different features.
   - This visualization helps identify strong positive or negative correlations between features, which can indicate important relationships in the dataset.
-    [EDA Heatmap](images/corr.png)
+    ![EDA Heatmap](images/corr.png)
 
 - Scatter Plot: Carat vs. Price:
   - A scatter plot is generated using `seaborn` to visualize the relationship between carat (diamond weight) and price.
