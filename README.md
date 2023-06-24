@@ -8,7 +8,9 @@ This repository contains a machine learning model for predicting diamond prices.
 - [Dataset](#dataset)
 - [EDA](#EDA)
 - [Preprocessing](#Preproccesing)
-- [Feature Engineering](#Feature_Engineering)
+- [Feature Engineering](#Feature Engineering)
+- [Feature Engineering](#GradientBoost Model)
+- [Feature Engineering](#GridSearch)
 
 
 ## Introduction
@@ -49,7 +51,7 @@ To perform the EDA, we use the `pandas`, `matplotlib`, and `seaborn` libraries i
   - It helps identify any significant price differences based on the cut quality.
   - This step is done with all the categorical variables, here is the example with 'colors' feature.
   
-  ![Color Box Plot](images/corr.png)
+  ![Color Box Plot](images/boxplot.png)
 
 The EDA process provides valuable insights into the dataset, enabling us to make informed decisions during preprocessing, feature engineering, and model selection. Feel free to explore and modify the EDA code to suit your specific requirements and gain a deeper understanding of the diamond dataset.
 
@@ -80,3 +82,27 @@ This interaction term incorporates the carat weight of the diamond along with it
 By introducing these new variables, we aim to enhance the predictive capability of our machine learning model by incorporating additional information and potential interactions between existing features. These engineered features can help the model capture non-linear relationships and improve its ability to predict diamond prices accurately.
 
 Feature engineering is a crucial step in machine learning projects as it allows us to extract valuable insights and leverage domain knowledge to create more informative features. It is an iterative process that involves experimentation, domain expertise, and understanding the underlying relationships in the data.
+
+## GradientBoost Model
+
+The GradientBoost model is a powerful machine learning algorithm that belongs to the ensemble learning family. It combines multiple weak prediction models, typically decision trees, to create a stronger and more accurate predictive model. GradientBoosting is based on the principle of boosting, where each subsequent model in the ensemble is trained to correct the errors made by the previous models.
+
+Key characteristics of the GradientBoost model include:
+
+Boosting: The model sequentially builds an ensemble of weak learners, where each subsequent model focuses on correcting the mistakes made by the previous models.
+Gradient Descent: It utilizes gradient descent optimization to minimize a loss function, such as mean squared error (MSE) or log loss, during the training process.
+Gradient Calculation: The model calculates gradients of the loss function with respect to the predicted values, enabling it to update subsequent models to minimize the overall loss.
+Feature Importance: GradientBoost provides a measure of feature importance, allowing you to identify the most influential features in predicting the target variable.
+The GradientBoost model is known for its ability to handle complex non-linear relationships, handle different types of data, and effectively handle outliers and missing values. It often delivers strong predictive performance, making it a popular choice for a wide range of regression and classification tasks.
+
+## GridSearch
+
+GridSearch is a technique used for hyperparameter tuning in machine learning models. Hyperparameters are configuration settings that are not learned from the data but are set before training the model. GridSearch automates the process of systematically searching through a predefined set of hyperparameter values to find the combination that yields the best model performance.
+
+Key features of GridSearch include:
+
+Hyperparameter Space: Define a grid or a list of hyperparameter values to explore for each hyperparameter of the model.
+Cross-Validation: GridSearch typically uses cross-validation to evaluate the performance of each hyperparameter combination. It partitions the training data into multiple subsets, trains and validates the model on different subsets, and calculates the average performance.
+Evaluation Metric: Specify an evaluation metric, such as accuracy or mean squared error, to determine the best hyperparameter combination based on the model's performance.
+Selection Criteria: GridSearch selects the hyperparameter combination that optimizes the evaluation metric, providing the best-performing model configuration.
+By exhaustively searching through the hyperparameter space, GridSearch helps to identify the optimal combination of hyperparameters, leading to improved model performance. It saves time and effort by automating the search process and allows you to fine-tune your model for the specific problem at hand.
