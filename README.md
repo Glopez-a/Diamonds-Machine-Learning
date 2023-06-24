@@ -6,11 +6,9 @@ This repository contains a machine learning model for predicting diamond prices.
 
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
+- [EDA](#EDA)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -22,58 +20,37 @@ The project consists of several stages, including exploratory data analysis to g
 
 The dataset used for this project is the Diamond Dataset, which includes various attributes of diamonds such as carat weight, cut quality, color, clarity, dimensions, and price. The dataset is not included in this repository, but it can be obtained from a reliable source such as Kaggle or a diamond data provider.
 
-## Installation
+## EDA
 
-To run this project locally, please follow these steps:
+Before building the machine learning model, it is essential to gain insights into the diamond dataset through exploratory data analysis (EDA). The EDA helps us understand the relationships between the features and the target variable, identify patterns, and uncover any anomalies or outliers in the data.
 
-1. Clone the repository:
+To perform the EDA, we use the `pandas`, `matplotlib`, and `seaborn` libraries in Python. Here's a summary of the EDA steps and visualizations:
 
-git clone https://github.com/your-username/diamond-price-prediction.git
+- Loading the Dataset:
+  - The diamond dataset is loaded from a .db file named 'diamonds_train.db' located in the 'data/' directory.
+  - The first few rows of the dataset are displayed to get a glimpse of the data.
 
-css
-Copy code
+- Summary Statistics:
+  - The `describe()` function is used to compute summary statistics such as count, mean, standard deviation, minimum, and maximum values for each numerical column in the dataset.
+  - These statistics provide an overview of the distribution and range of values in the dataset.
 
-2. Navigate to the project directory:
+- Correlation Matrix:
+  - The correlation matrix is calculated using the `corr()` function from `pandas`.
+  - A heatmap is created using `seaborn` to visualize the correlations between different features.
+  - This visualization helps identify strong positive or negative correlations between features, which can indicate important relationships in the dataset.
+    [EDA Heatmap](images/corr.png)
 
-cd diamond-price-prediction
+- Scatter Plot: Carat vs. Price:
+  - A scatter plot is generated using `seaborn` to visualize the relationship between carat (diamond weight) and price.
+  - The scatter plot helps understand the general trend and any potential outliers in the data.
+  - It provides insights into how the diamond price varies with carat weight.
 
-markdown
-Copy code
+- Box Plot: Cut vs. Price:
+  - A box plot is created using `seaborn` to analyze the relationship between the cut quality of the diamonds and their prices.
+  - The box plot displays the distribution of prices for different diamond cuts.
+  - It helps identify any significant price differences based on the cut quality.
 
-3. Install the required dependencies:
-
-pip install -r requirements.txt
-
-markdown
-Copy code
-
-4. Obtain the diamond dataset and place it in the project directory.
-
-5. Run the project:
-
-python main.py
-
-csharp
-Copy code
-
-## Usage
-
-After following the installation steps, you can use this project as follows:
-
-1. Ensure the diamond dataset is placed in the project directory.
-
-2. Open the `main.py` file and modify any necessary configuration parameters such as file paths, feature selection, or model hyperparameters.
-
-3. Run the project using the command:
-
-python main.py
-
-markdown
-Copy code
-
-4. The model will be trained and evaluated, and the predicted diamond prices will be generated.
-
-Feel free to explore and modify the code to suit your needs and experiment with different configurations to improve the model's performance.
+The EDA process provides valuable insights into the dataset, enabling us to make informed decisions during preprocessing, feature engineering, and model selection. Feel free to explore and modify the EDA code to suit your specific requirements and gain a deeper understanding of the diamond dataset.
 
 ## Project Structure
 
