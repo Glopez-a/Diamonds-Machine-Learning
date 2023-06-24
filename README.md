@@ -8,8 +8,8 @@ This repository contains a machine learning model for predicting diamond prices.
 - [Dataset](#dataset)
 - [EDA](#EDA)
 - [Preprocessing](#Preproccesing)
-- [Feature Engineering](#Feature Engineering)
-- [Feature Engineering](#GradientBoost Model)
+- [Feature Engineering](#FeatureEngineering)
+- [Feature Engineering](#GradientBoostModel)
 - [Feature Engineering](#GridSearch)
 
 
@@ -67,7 +67,7 @@ In the diamond price prediction project, label encoding is applied to handle cat
 
 Label encoding enables the machine learning model to understand and process categorical variables as numerical inputs. However, it is important to note that label encoding introduces an inherent ordering or ranking among the categories, which may not always be appropriate or desired. In such cases, other encoding techniques like one-hot encoding or target encoding can be explored.
 
-## Feature Engineering
+## FeatureEngineering
 
 Feature engineering is the process of creating new meaningful features or transforming existing features to improve the performance and predictive power of machine learning models. In the diamond price prediction project, we perform feature engineering to derive two new variables:
 
@@ -83,7 +83,7 @@ By introducing these new variables, we aim to enhance the predictive capability 
 
 Feature engineering is a crucial step in machine learning projects as it allows us to extract valuable insights and leverage domain knowledge to create more informative features. It is an iterative process that involves experimentation, domain expertise, and understanding the underlying relationships in the data.
 
-## GradientBoost Model
+## GradientBoostModel
 
 The GradientBoost model is a powerful machine learning algorithm that belongs to the ensemble learning family. It combines multiple weak prediction models, typically decision trees, to create a stronger and more accurate predictive model. GradientBoosting is based on the principle of boosting, where each subsequent model in the ensemble is trained to correct the errors made by the previous models.
 
